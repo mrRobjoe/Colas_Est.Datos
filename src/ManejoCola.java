@@ -88,8 +88,8 @@ public class ManejoCola {
     }
 
     //Método para atender a clientes de cada caja.
-    public void Atender() {
-        Scanner leer = new Scanner(System.in);
+    public void Atender() {//editar y eliminar la caja que tenga más 
+        /*Scanner leer = new Scanner(System.in);
         String elegirCaja = "";
         int opcion = 0;
 
@@ -102,8 +102,8 @@ public class ManejoCola {
 
         do {//corregir error y agregarlo como en ingresar
             System.out.println(elegirCaja);
-            opcion = leer.nextInt();
-            if ((opcion == 1)) {
+            opcion = leer.nextInt();*/
+            if ((ultimoCaj1 >= ultimoCaj2 && ultimoCaj1 >= ultimoCaj3 && ultimoCaj1 >= ultimoCaj4)) {
                 if (!Caja1Vacia()) {
                     cajero1[frente1] = cajero1[frente1 + 1];
                     cajero1[frente1 + 1] = cajero1[frente1 + 2];
@@ -113,7 +113,7 @@ public class ManejoCola {
                     System.err.println("La caja 1 está vacía");
                 }
 
-            } else if ((opcion == 2)) {
+            } else if ((ultimoCaj2 >= ultimoCaj1 && ultimoCaj2 >= ultimoCaj3 && ultimoCaj2 >= ultimoCaj4)) {
                 if (!Caja2Vacia()) {
                     cajero2[frente2] = cajero2[frente2 + 1];
                     cajero2[frente2 + 1] = cajero2[frente2 + 2];
@@ -123,7 +123,7 @@ public class ManejoCola {
                     System.err.println("La caja 2 está vacía");
                 }
 
-            } else if ((opcion == 3)) {
+            } else if ((ultimoCaj3 >= ultimoCaj1 && ultimoCaj3 >= ultimoCaj2 && ultimoCaj3 >= ultimoCaj4)) {
                 if (!Caja3Vacia()) {
                     cajero3[frente3] = cajero3[frente3 + 1];
                     cajero2[frente3 + 1] = cajero3[frente3 + 2];
@@ -133,7 +133,7 @@ public class ManejoCola {
                     System.err.println("La caja 3 está vacía");
                 }
 
-            } else if ((opcion == 4)) {
+            } else if ((ultimoCaj4 >= ultimoCaj1 && ultimoCaj4 >= ultimoCaj2 && ultimoCaj4 >= ultimoCaj3)) {
                 if (!Caja4Vacia()) {
                     cajero4[frente4] = cajero4[frente4 + 1];
                     cajero4[frente4 + 1] = cajero4[frente4 + 2];
@@ -144,7 +144,7 @@ public class ManejoCola {
                 }
             } else {
             }
-        } while (opcion != 5);
+        //} while (opcion != 5);
     }//Cierre Atender
 
     //Método para mostrar cajas
